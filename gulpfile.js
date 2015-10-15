@@ -1,10 +1,12 @@
 var gulp = require('gulp');
+var fs = require('fs');
 
-gulp.task('welcome', function () {
-  console.log('welcome to gulp!')
+fs.readdirSync(__dirname + '/gulp').forEach(function (task) {
+  require('./gulp/' + task)
 });
 
-gulp.task('hello', ['welcome'], function () {
-  console.log('hello world')
-});
+gulp.task('dev', ['watch:css', 'watch:js', 'dev:server']);
+
+
+
 
