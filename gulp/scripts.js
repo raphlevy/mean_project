@@ -3,7 +3,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate');
 var sourcemaps = require('gulp-sourcemaps');
-// var gutil = require('gulp-util');
+var gutil = require('gulp-util');
 
 gulp.task('js', function () {
   gulp.src(['ng/module.js','ng/**/*.js'])
